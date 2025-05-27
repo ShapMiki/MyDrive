@@ -10,8 +10,10 @@
 
     secret_key_for_jwt =
     algorithm_for_jwt =
-
+    
+    hour_zone=
 
 
 db scheme
+
 ![img.png](img.png)
