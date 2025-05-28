@@ -1,4 +1,8 @@
 {
   "main_data_direction": "C:/myapp",
-  "data_directions": ["C:/myapp", "D:/myapp"]
+  "data_directions": ["C:/myapp", "D:/myapp"],
+  "data_directions_backup": ["E:/myapp_backup", "F:/myapp_backup"],
+
+  "default_coloborators_space_volume": 1000,
+  "default_user_space_volume": 10000
 }
