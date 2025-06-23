@@ -30,7 +30,7 @@ class User(Base):
     
     general_directions = relationship(
         "Direction",
-        secondary=general_directions_association,
+        secondary=direction_coloborators_association,
         back_populates="general_users"
     )
     favorite_directions = relationship(

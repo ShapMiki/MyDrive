@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import RedirectResponse
 
 from direction.router import router as direction_router
 from file.router import router as file_router
@@ -12,6 +13,13 @@ app.include_router(direction_router, prefix="/api")
 app.include_router(file_router, prefix="/api")
 app.include_router(user_router, prefix="/api")
 
+
+@app.get("/api")
+def index():
+    return RedirectResponse(url="/api/status")
+@app.get("/api/status")
+def read_status():
+    return {"status": "ok"}
 
 
 origins = [
